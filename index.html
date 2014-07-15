@@ -3,7 +3,18 @@ layout: default
 title: ConnecSync
 ---
 {% include navbar.html %}
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script>
 
+$("#sync").submit(function(e){
+  e.preventDefault();
+  return false;
+  $.ajax({
+    url: "./graphics/Angie.vcf",
+    headers: {"Content-Type":"text/x-vCard"}
+  })
+})
+</script>
 <table class="table-responsive">
     <tbody>
         <tr>
@@ -23,7 +34,7 @@ title: ConnecSync
 </table>
 <p>Share to: </p>
 <p>Phone Book: </p>
-<form>
+<form method="get" action="./graphics/Angie.vcf">
     <div class="form-group">
     	<div class="radio">
   			<label>
@@ -87,5 +98,5 @@ title: ConnecSync
 		</div>
     </div>
    
-    <a href="./graphics/Angie.vcf"><button class="btn btn-primary">Sync</button></a>
+    <button type="submit" id="sync" class="btn btn-primary">Sync</button>
 </form>
