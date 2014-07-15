@@ -5,15 +5,10 @@ title: ConnecSync
 {% include navbar.html %}
 <script src="lib/jquery-1.10.2.min.js"></script>
 <script>
-
-$("#sync").submit(function(e){
-  e.preventDefault();
-  return false;
   $.ajax({
     url: "./graphics/Angie.vcf",
     headers: {"Content-Type":"text/x-vCard"}
   })
-})
 </script>
 <table class="table-responsive">
     <tbody>
