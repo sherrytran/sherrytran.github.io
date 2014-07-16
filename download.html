@@ -3,10 +3,13 @@ layout: default
 title: ConnecSync
 ---
 {% include navbar.html %}
-<iframe width="1" height="1" frameborder="0" src="./graphics/Angie.vcf"></iframe>
+<!--iframe width="1" height="1" frameborder="0" src="./graphics/Angie.vcf"></iframe_-->
 <script src="lib/jquery-1.10.2.min.js"></script>
+<script src="lib/jquery.fileDownload.js"></script>
 <script>
-  window.location = "thankyou.html"
+$.fileDownload('./graphics/Angie.vcf')
+.done(function(){window.location = "thankyou.html";})
+ .fail(function(){console.info("fail")});
 </script>
 
 <p>Please wait...</p>
