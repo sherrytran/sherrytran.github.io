@@ -1,4 +1,0 @@
-ConnecSync
-==========
-
-project for Angie
