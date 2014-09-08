@@ -1,0 +1,135 @@
+<!-- Static navbar -->
+<script src="lib/jquery-1.10.2.min.js"></script>
+<script>
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}    
+
+$(document).ready(function(){
+    var user = getUrlParameter("username")
+    $("#user").text("Welcome, "+ user);
+    if(user=="sherry"){
+        $("#log").hide();
+        $("#breport").hide();
+        $("#dreport").hide();
+        $("#ereport").hide();
+    }
+    else{
+        $("#log").show();
+        $("#breport").show();
+        $("#dreport").show();
+        $("#ereport").show();
+    }
+});
+</script> 
+
+<div class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <!-- Topbar Navigation -->
+                <ul class="loginbar pull-right">
+                    <li>
+                       <a id="user" href="#"></a>
+                    </li>
+                    <li class="topbar-devider"></li>   
+                    <li><a href="login.html">Logout</a></li>  
+                </ul>
+                <!-- End Topbar Navigation -->
+            </div>
+        </div>
+        <!-- End Topbar -->
+    
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Product -->
+                        <li {% if include.menuchoice == 'product' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank" href="#">A Report</a></li>
+                                <li id="areport"><a target="_blank" href="#">B Report</a></li>
+                                <li><a target="_blank" href="#">C Report</a></li>
+                                <li id="dreport"><a target="_blank" href="#">D report</a></li>
+                                <li id="ereport"><a target="_blank" href="#">E report</a></li>
+                            </ul>
+                        </li>
+                        <!-- End Product -->
+
+                        <!-- Services -->                        
+                        <li id="log" {% if include.menuchoice == 'services' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                View Logs
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a target="_blank" href="#">Error Log</a></li>
+                              <li><a target="_blank" href="#">User Log</a></li>
+                            </ul>
+                        </li>
+                        <!-- End Services -->
+
+                        <!-- Partners -->
+                        <li {% if include.menuchoice == 'partners' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                Unlock Functions
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a target="_blank" href="#">Unlock Activity page</a></li>
+                              <li><a target="_blank" href="#">Unlock House Visit</a></li>
+                            </ul>
+                        </li>
+                        <!-- End Partners -->
+
+                        <!-- Customers -->
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                                User Management
+                            </a>
+                        </li>
+                        <!-- End Customers-->
+
+                        <li>
+                            <input style="margin-top:7px" type="text">
+                        </li>
+                        <!-- Search Block -->
+                        <li>
+                            <i class="search fa fa-search search-btn"></i>
+                            <div class="search-open">
+                                <div class="input-group animated fadeInDown">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn-u" type="button">Go</button>
+                                    </span>
+                                </div>
+                            </div>    
+                        </li>
+                        <!-- End Search Block -->
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>    
+        </div>            
+        <!-- End Navbar -->
+</div>
