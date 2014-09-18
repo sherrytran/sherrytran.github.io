@@ -17,6 +17,7 @@ function getUrlParameter(sParam)
 
 $(document).ready(function(){
     var user = getUrlParameter("username")
+    $("a#myreport").prop("href","report-detail.html?username="+user)
     $("#user").text("Welcome, "+ user);
     if(user=="sherry"){
         $("#log").hide();
@@ -34,25 +35,9 @@ $(document).ready(function(){
 </script> 
 
 <div class="header">
-        <!-- Topbar -->
-        <div class="topbar">
-            <div class="container">
-                <!-- Topbar Navigation -->
-                <ul class="loginbar pull-right">
-                    <li>
-                       <a id="user" href="#"></a>
-                    </li>
-                    <li class="topbar-devider"></li>   
-                    <li><a href="login.html">Logout</a></li>  
-                </ul>
-                <!-- End Topbar Navigation -->
-            </div>
-        </div>
-        <!-- End Topbar -->
-    
         <!-- Navbar -->
         <div class="navbar navbar-default" role="navigation">
-            <div class="container">
+            <div class="container-float">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -65,52 +50,38 @@ $(document).ready(function(){
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <!-- Product -->
+                        <li><a href="content.html">
+                                <i class="fa fa-home"></i>
+                                Home
+                            </a></i></li>
                         <li {% if include.menuchoice == 'product' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            
+                            <a id="myreport" href="" class="dropdown-toggle">
+                                <i class="fa fa-bar-chart-o"></i>
                                 Reports
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a target="_blank" href="#">A Report</a></li>
-                                <li id="areport"><a target="_blank" href="#">B Report</a></li>
-                                <li><a target="_blank" href="#">C Report</a></li>
-                                <li id="dreport"><a target="_blank" href="#">D report</a></li>
-                                <li id="ereport"><a target="_blank" href="#">E report</a></li>
+                                <li><a target="_blank" href="report.html">Information Report on New Residents, New PRs and NCs for all Division</a></li>
+                                <li id="areport"><a target="_blank" href="report.html">Statistic Report on New Residents, New PRs and NCs for all Division</a></li>
+                                <li><a target="_blank" href="report.html">House Visit Report</a></li>
+                                <li id="dreport"><a target="_blank" href="report.html">Report on SCEF KPI Achievement</a></li>
+                                <li id="ereport"><a target="_blank" href="report.html">Report on Welcome Letter Automated Update</a></li>
                             </ul>
                         </li>
                         <!-- End Product -->
-
-                        <!-- Services -->                        
-                        <li id="log" {% if include.menuchoice == 'services' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                View Logs
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a target="_blank" href="#">Error Log</a></li>
-                              <li><a target="_blank" href="#">User Log</a></li>
-                            </ul>
-                        </li>
-                        <!-- End Services -->
-
                         <!-- Partners -->
                         <li {% if include.menuchoice == 'partners' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                Unlock Functions
+                                <i class="fa fa-gear"></i>
+                                Administrator
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a target="_blank" href="#">Unlock Activity page</a></li>
-                              <li><a target="_blank" href="#">Unlock House Visit</a></li>
+                              <li><a target="_blank" href="#">View Logs</a></li>
+                              <li><a target="_blank" href="#">Unlock Functions</a></li>
+                              <li><a target="_blank" href="#">User Management</a></li>
                             </ul>
                         </li>
                         <!-- End Partners -->
-
-                        <!-- Customers -->
-                        <li>
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                User Management
-                            </a>
-                        </li>
-                        <!-- End Customers-->
-
                         <li>
                             <input style="margin-top:7px" type="text">
                         </li>
@@ -127,6 +98,16 @@ $(document).ready(function(){
                             </div>    
                         </li>
                         <!-- End Search Block -->
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li>
+
+                            <a id="user" href="#"> 
+                            </a>
+                        </li>
+                        <li><a href="login.html">
+                            <i class="fa fa-sign-out"></i>
+                            Logout</a></li> 
                     </ul>
                 </div><!--/navbar-collapse-->
             </div>    

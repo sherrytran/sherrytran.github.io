@@ -289,7 +289,6 @@
 	color: #687074;
 	font-size: 15px;
 	font-weight:400;
-	text-transform: uppercase;
 }
 
 .header .navbar-default .navbar-nav > .active > a {
@@ -299,7 +298,7 @@
 /*Navbar Nav*/
 @media (min-width: 992px) {
 	.header .navbar-nav {
-		float: right;
+		
 	}	
 }
 
