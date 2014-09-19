@@ -18,12 +18,17 @@ function getUrlParameter(sParam)
 $(document).ready(function(){
     var user = getUrlParameter("username")
     $("a#myreport").prop("href","report-detail.html?username="+user)
+    $("a#home").prop("href","content.html?username="+user)
+    $("a.report").prop("href","report.html?username="+user)
     $("#user").text("Welcome, "+ user);
     if(user=="sherry"){
         $("#log").hide();
         $("#breport").hide();
         $("#dreport").hide();
         $("#ereport").hide();
+        $("#breportdiv").hide();
+        $("#dreportdiv").hide();
+        $("#ereportdiv").hide();
     }
     else{
         $("#log").show();
@@ -36,7 +41,7 @@ $(document).ready(function(){
 
 <div class="header">
         <!-- Navbar -->
-        <div class="navbar navbar-default" role="navigation">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-float">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -50,7 +55,7 @@ $(document).ready(function(){
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                         <!-- Product -->
-                        <li><a href="content.html">
+                        <li><a id="home" href="">
                                 <i class="fa fa-home"></i>
                                 Home
                             </a></i></li>
@@ -61,16 +66,16 @@ $(document).ready(function(){
                                 Reports
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a target="_blank" href="report.html">Information Report on New Residents, New PRs and NCs for all Division</a></li>
-                                <li id="areport"><a target="_blank" href="report.html">Statistic Report on New Residents, New PRs and NCs for all Division</a></li>
-                                <li><a target="_blank" href="report.html">House Visit Report</a></li>
-                                <li id="dreport"><a target="_blank" href="report.html">Report on SCEF KPI Achievement</a></li>
-                                <li id="ereport"><a target="_blank" href="report.html">Report on Welcome Letter Automated Update</a></li>
+                                <li id="areport"><a class="report" target="_blank" href="report.html">Information Report on New Residents, New PRs and NCs for all Division</a></li>
+                                <li id="breport"><a class="report" target="_blank" href="report.html">Statistic Report on New Residents, New PRs and NCs for all Division</a></li>
+                                <li id="creport"><a class="report" target="_blank" href="report.html">House Visit Report</a></li>
+                                <li id="dreport"><a class="report" target="_blank" href="report.html">Report on SCEF KPI Achievement</a></li>
+                                <li id="ereport"><a class="report" target="_blank" href="report.html">Report on Welcome Letter Automated Update</a></li>
                             </ul>
                         </li>
                         <!-- End Product -->
                         <!-- Partners -->
-                        <li {% if include.menuchoice == 'partners' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
+                        <li id="log" {% if include.menuchoice == 'partners' %} class="dropdown active" {% else %} class="dropdown" {% endif %}>
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-gear"></i>
                                 Administrator

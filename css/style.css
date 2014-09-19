@@ -286,7 +286,7 @@
 }
 
 .header .navbar-default .navbar-nav > li > a {
-	color: #687074;
+	color: white;
 	font-size: 15px;
 	font-weight:400;
 }
@@ -453,6 +453,7 @@
 	/*Navbar Collapse*/
 	.header .navbar-collapse {
 		padding: 0;
+		background:red;
 	}
 
 	/*Navbar*/

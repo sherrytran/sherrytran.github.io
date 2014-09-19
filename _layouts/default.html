@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/unify/horizontal-parallax/css/horizontal-parallax.css">
 
     <!-- CSS Theme -->    
-    <link rel="stylesheet" href="/css/themes/default.css" id="style_color">
+    <link rel="stylesheet" href="/css/themes/red.css" id="style_color">
 
     <title>{{page.title}}</title>
     <!--[if lt IE 9]>
@@ -56,6 +56,8 @@
         OwlCarousel.initOwlCarousel();
     });
 </script>
-
+{% javascript_asset_tag global %}
+- /_assets/elixirtech.js.coffee
+{% endjavascript_asset_tag %}
     </body>
 </html>
