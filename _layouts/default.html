@@ -12,11 +12,10 @@
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="/unify/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/unify/flexslider/flexslider.css"> 
-    <link rel="stylesheet" href="/unify/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="/unify/bxslider/jquery.bxslider.css">             
-    <link rel="stylesheet" href="/unify/horizontal-parallax/css/horizontal-parallax.css">
-
+    <link rel="stylesheet" href="/unify/Simple-Line-Icons/simple-line-icons.css">
+    
+   
+    <link rel="stylesheet" href="/css/pages/page_log_reg_v2.css">  
     <!-- CSS Theme -->    
     <link rel="stylesheet" href="/css/themes/red.css" id="style_color">
 
@@ -27,11 +26,12 @@
     <![endif]-->
   </head>
     <body>
-      <div class="wrapper">
+      <!--div class="wrapper"-->
         
           {{ content }}
         
-      </div>
+      <!--/div-->
+      {% include footer.html %}
        <!-- JS Global Compulsory -->  
       <script src="/lib/jquery-1.10.2.min.js"></script>
       <script type="text/javascript" src="/lib/jquery-migrate-1.2.1.min.js"></script>
@@ -40,10 +40,7 @@
 
 <!-- JS Implementing Plugins -->           
 <script type="text/javascript" src="/unify/back-to-top.js"></script>
-<script type="text/javascript" src="/unify/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="/unify/owl-carousel/owl.carousel.js"></script>
 <script type="text/javascript" src="/unify/horizontal-parallax/js/sequence.jquery-min.js"></script>
-<script type="text/javascript" src="/unify/horizontal-parallax/js/horizontal-parallax.js"></script>
 <script type="text/javascript" src="/unify/bxslider/jquery.bxslider.js"></script>
 <!-- JS Page Level -->           
 <script type="text/javascript" src="/unify/app.js"></script>
@@ -51,9 +48,7 @@
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
-        App.initSliders();
-        App.initBxSlider();
-        OwlCarousel.initOwlCarousel();
+        
     });
 </script>
     </body>

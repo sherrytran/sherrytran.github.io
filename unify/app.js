@@ -103,13 +103,13 @@ var App = function () {
         });
 
         var setColor = function (color, data_header) {
-            jQuery('#style_color').attr("href", "assets/css/themes/" + color + ".css");
+            jQuery('#style_color').attr("href", "css/themes/" + color + ".css");
             if(data_header == 'light'){
-                jQuery('#style_color-header-1').attr("href", "assets/css/themes/headers/header1-" + color + ".css");
+                jQuery('#style_color-header-1').attr("href", "css/themes/headers/header1-" + color + ".css");
                 jQuery('#logo-header').attr("src", "assets/img/logo1-" + color + ".png");
                 jQuery('#logo-footer').attr("src", "assets/img/logo2-" + color + ".png");
             } else if(data_header == 'dark'){
-                jQuery('#style_color-header-2').attr("href", "assets/css/themes/headers/header2-" + color + ".css");
+                jQuery('#style_color-header-2').attr("href", "css/themes/headers/header2-" + color + ".css");
                 jQuery('#logo-header').attr("src", "assets/img/logo1-" + color + ".png");
                 jQuery('#logo-footer').attr("src", "assets/img/logo2-" + color + ".png");
             }
