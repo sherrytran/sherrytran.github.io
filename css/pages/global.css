@@ -17,10 +17,7 @@ a:hover { color: #0099ff; }
 	
 }
 
-h1, h2 {
-	font-family: 'IM Fell DW Pica SC', Helvetica, Arial, sans-serif;
-	font-weight: normal;
-}
+
 
 h1 {
 	font-size: 35px;
@@ -34,10 +31,7 @@ h1, h2 {
 	color: #333;
 	text-align: center;	
 }
-h2{
-	text-align: right;
-	padding: 10px 0px;
-}
+
 
 .bar {
 	background-color: #111;
