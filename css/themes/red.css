@@ -16,6 +16,10 @@ a.read-more:hover {
 	color:#e74c3c;
 }
 
+.header .navbar-collapse {
+	padding: 0;
+	background:#e74c3c;
+}
 /*Sliders
 ------------------------------------*/
 /*Main Parallax Sldier*/

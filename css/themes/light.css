@@ -33,6 +33,10 @@ a.read-more:hover {
 	color: #95a5a6;
 }
 
+.header .navbar-collapse {
+	padding: 0;
+	background:#95a5a6;
+}
 /*Navbar Toggle*/
 .navbar-toggle,
 .navbar-default .navbar-toggle:hover, 
